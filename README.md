@@ -10,7 +10,7 @@ This is my LAB which i setup on my Laptop. I used the following systems:-
     4) The network is 172.16.0.0/24 which is also in vmware - SOPHOS_UTM_Router.
     
 So starting with DC (Domain Controller) i setup the windows server 2019 Evaluation Center. the ip is 172.16.0.10 on custome Net in vmware.
-The plan is to use this LDAP scenario so i have a feel of SAP HANA working with LDAP server. This will give me a sort of experince in SAP and will at least help me in learning SAP side of the business IT operations.
+The plan is to use this LDAP scenario so i have a feel of SAP HANA working with LDAP server. This will give me a sort of experince in SAP and at least help me in learning SAP side of the business IT operations.
 
 OPTIONALLY:
 
