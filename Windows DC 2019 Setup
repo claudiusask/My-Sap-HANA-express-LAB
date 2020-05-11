@@ -30,4 +30,5 @@ Now we need to promote this VM to Domain Controller with the following Powershel
           
     Remember the domain name is EXAMPLE.local 
     
-T
+This process of promoting this VM to DC wil require a restart of the VM to save any unsaved tasks adn wait for it to complete 
+and reboot the VM.
