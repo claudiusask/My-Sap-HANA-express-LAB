@@ -1,0 +1,33 @@
+###
+Windows Server 2019 Standard installation on 
+  1) 1 CPU 
+  2) 2GB ram 
+  3) 60GB Hard disk
+  
+Started with vmware tools installation and changing the dynamic ip to static ip of 172.16.0.10 and main Gateway at 172.16.0.254. 
+Later i changed the name of the machine to MAINDC and restarted the VM for the settings to take affect. When the vM boots again
+we need to add the role of Domain Controller on this VM. Go to Server Manager >> Manage (TOP RIGHT) >> Add roles and Features. 
+Add the Domain Controller feature and let it restart the VM if required.
+
+Now we need to promote this VM to Domain Controller with the following Powershell script:-
+          #
+          # Windows PowerShell script for AD DS Deployment
+          #
+
+          Import-Module ADDSDeployment
+          Install-ADDSForest `
+          -CreateDnsDelegation:$false `
+          -DatabasePath "C:\Windows\NTDS" `
+          -DomainMode "WinThreshold" `
+          -DomainName "cyborenics.local" `
+          -DomainNetbiosName "EXAMPLE" `
+          -ForestMode "WinThreshold" `
+          -InstallDns:$true `
+          -LogPath "C:\Windows\NTDS" `
+          -NoRebootOnCompletion:$false `
+          -SysvolPath "C:\Windows\SYSVOL" `
+          -Force:$true
+          
+    Remember the domain name is EXAMPLE.local 
+    
+T
