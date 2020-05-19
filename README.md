@@ -1,6 +1,10 @@
 # My-Sap-HANA-express-LAB
 Learn SAP HANA administration in a simulated environment
 
+Details are at: 
+
+https://claudiusask.github.io
+
 
 ####
 This is my LAB which i setup on my Laptop. I used the following systems:-
